@@ -1,0 +1,253 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Dec 16, 2025, 11:38:57 PM
+    Author     : trang
+*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    background-color: #1a0f00;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    color: #f5f5dc;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, .title-text {
+    font-family: 'Cinzel', serif;
+    color: #e3c598;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.welcome-text {
+    font-family: fantasy, serif;
+    color: #e3c598;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2, h3 {
+    font-family: monospace, serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-align: center;
+}
+form, .menu-box, .content-container {
+    background: rgba(45, 30, 20, 0.92);
+    backdrop-filter: blur(5px);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #6d4c41;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    width: 100%;
+    max-width: 700px; /* More natural width for forms */
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+input[type="submit"], .btn-primary {
+    background: #8d6e63;
+    color: #fff;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin: 0 auto; /* Backup centering */
+}
+
+input[type="submit"]:hover {
+    background: #d2b48c;
+    color: #2c1b0e;
+    box-shadow: 0 5px 15px rgba(210, 180, 140, 0.4);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d2b48c;
+    font-weight: 500;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="email"], select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: #fffaf0;
+    border: 1px solid #8d6e63;
+    border-radius: 6px;
+    color: #3e2723;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(255, 250, 240, 0.95);
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #3e2723;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+th {
+    background: #5d4037;
+    color: #e3c598;
+    padding: 18px;
+    font-family: 'Cinzel', serif;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #d7ccc8;
+    text-align: center;
+}
+
+.menu-box {
+    background-color: rgba(62, 39, 35, 0.9);
+    padding: 30px;
+    border: 2px solid #d2b48c;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.menu-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-box {
+    display: block;
+    padding: 12px;
+    background-color: #8d6e63;
+    color: #f5f5dc !important;
+    text-decoration: none;
+    border: 1px solid #d2b48c;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-box:hover {
+    background-color: #d2b48c;
+    color: #3e2723 !important;
+}
+
+.status-reserved {
+    color: #d2b48c;
+    font-weight: bold;
+}
+
+.status-checkedin {
+    color: #81c784;
+    font-weight: bold;
+}
+
+.status-canceled {
+    color: #e57373;
+    font-weight: bold;
+}
+
+.action-cell {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    min-width: 220px;
+    font-weight: bold;
+    color: #8d6e63;
+    text-decoration: none;
+}
+
+.error-msg, .warning-msg {
+    width: 95%;
+    max-width: 800px;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.error-msg {
+    background-color: rgba(211, 47, 47, 0.2);
+    border: 1px solid #d32f2f;
+    color: #ff8a80;
+}
+
+.warning-msg {
+    background-color: rgba(255, 160, 0, 0.2);
+    border: 1px solid #ffa000;
+    color: #ffd54f;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.no-matches {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border: 1px dashed #d2b48c;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: #d2b48c;
+}
+
+.info-box {
+    background-color: rgba(210, 180, 140, 0.1);
+    border: 1px solid #d2b48c;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: #f5f5dc;
+    text-align: center;
+}
+
+.back-link {
+    color: #d2b48c;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
